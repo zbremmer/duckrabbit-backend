@@ -1,0 +1,42 @@
+type Page {
+  id: ID!
+  createdAt: AWSDateTime!
+  createdBy: User!
+  lastModifiedDate: AWSDateTime
+  lastModifiedBy: AWSDateTime
+  displayname: string!
+  tables: [Table]
+}
+
+type Table {
+  id: ID!
+  createdAt: AWSDateTime!
+  createdBy: User!
+  lastModifiedDate: AWSDateTime
+  lastModifiedBy: AWSDateTime
+  page: Page!
+  items: [Item]
+}
+
+type Item {
+  id: ID!
+  table: Table!
+  createdAt: AWSDateTime!
+  createdBy: User!
+  lastModifiedDate: AWSDateTime
+  lastModifiedBy: AWSDateTime
+  data: AWSJSON
+}
+
+type User {
+  id: ID!
+  role: Role!
+  firstname: String!
+  lastname: String!
+  email: AWSEmail!
+}
+
+type Role {
+  id: ID!
+  permissions: AWSJSON
+}
