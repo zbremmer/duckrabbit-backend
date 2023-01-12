@@ -26,4 +26,4 @@ jobs:
           poetry install --no-root
           npm install -g aws-cdk
       - name: Deploy stack
-        run: cdk deploy --app="python3 ${PWD}/app.py" --require-approval=never
+        run: cdk deploy --require-approval=never
