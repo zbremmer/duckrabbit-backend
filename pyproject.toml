@@ -8,12 +8,14 @@ packages = [{include = "duckrabbit_backend"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pathlib = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
 boto3 = "^1.26.48"
 botocore = "^1.29.48"
 black = "^22.12.0"
 aws-cdk-lib = "^2.59.0"
+pyjwt = "^2.6.0"
 
 [build-system]
 requires = ["poetry-core"]
